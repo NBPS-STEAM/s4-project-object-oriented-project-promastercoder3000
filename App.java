@@ -18,7 +18,7 @@ public class App {
       boolean loopVar = true;
       while(loopVar){ // Everything is in THIS while loop
         // start of first nested while loop
-        Miner MinerObj = new Miner(100, 0.0, 0);  // create our "Miner" object, which is the player.
+        Miner MinerObj = new Miner();  // create our "Miner" object, which is the player.
         while(true){ // this while loop will pretty much start the game, ask the player to say yes or no, adds to sophistication     
           System.out.println("(Welcome to the game! You'll be embarking on a mining mission.)"); // This while loop consists of many "System.out.println" statements that add to the sophistication of the game by introducing simple and basic dialogue.
           delayTime(3000); // calling the delayTime function, substituting 1000 into the parenthesis.
@@ -84,7 +84,7 @@ public class App {
               if (answer.equalsIgnoreCase("yes")){ // user might forget to capitalize, or might capitalize wrong letters, which is okay, as long as they spell "yes" correctly.
                 delayTime(3000);
                 System.out.println("Machine: Affirmative. Approaching...");
-                MinerObj.takeDamageOrFindMaterial();
+                MinerObj.setHealthOrFindMaterial();
                 break;
               }
               else if (answer.equalsIgnoreCase("no")){ // user might type no ( for whatever reason). (capitalization doesnt matter)
