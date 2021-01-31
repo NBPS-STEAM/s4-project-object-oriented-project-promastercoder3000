@@ -79,7 +79,7 @@ public class App {
               }
               else if (answer.equalsIgnoreCase("no")){ // user might type no ( for whatever reason). (capitalization doesnt matter)
                 Auxiliary.delayTime(3000);
-                System.out.println("Machine: Okay, we will bail out. You are quite a boring one.");
+                System.out.println("Machine: Okay, we will bail out.");
                 Auxiliary.delayTime(3000);
                 System.out.println("(The ship starts to accelerate and looks for the next indicator of an object within the tunnel.)");
                 Auxiliary.delayTime(3000);
@@ -105,7 +105,7 @@ public class App {
               Auxiliary.delayTime(3000);
               System.out.println("Machine: Good job. We will now be heading back to the station to show Mr. Dawson the resources we have collected. Hooray!");
               Auxiliary.delayTime(3000);
-              System.out.println("(You have won the game! As for how the story goes, basically, Miner Dawson sells the resources you have collected and gives you %50 of the profits made. Not too bad.");
+              System.out.println("(You have won the game! As for how the story goes, basically, Miner Dawson sells the resources you have collected and gives you 50% of the profits made. Not too bad.");
               Auxiliary.delayTime(3000);
               break;
             }

@@ -1,5 +1,8 @@
 public class Auxiliary{
-
+// the purpose of this class is to hold any additional methods the program may need
+// without making a mess of the code in the other classes.
+// the method below is a static method that belongs to the class in which we can use it across
+// our other files.
 public static void delayTime(int timeInMs){ 
       //this method will be accessed in other classes as well.
         try{

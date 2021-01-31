@@ -18,6 +18,13 @@ public class Miner{
     weightInPounds = 0;
     numMiners ++;
   }
+  
+  public Miner(int playerShipHealth){
+    shipHealth = playerShipHealth;
+    wealth = 0;
+    weightInPounds = 0;
+    numMiners ++;
+  }
 
 
   public static int getNumMiners(){
