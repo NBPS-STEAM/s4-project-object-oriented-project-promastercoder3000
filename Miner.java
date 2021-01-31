@@ -27,7 +27,7 @@ public class Miner{
   public void setHealth(){ 
       // this method is for taking damage to the player's machine, which is a side struggle of the game that the player must worry about.
     System.out.println("Machine: Mole spotted! Ahh!");
-    App.delayTime(3000);
+    Auxiliary.delayTime(3000);
     health = health - 10; // take away 10 from the set health of the player, which is set to 100 in the App class.
     System.out.println("Machine: The mole has clawed at me and drained 10% of my battery. I'm now at " + health + " health left!\n Please be careful, or we'll both be stuck and buried within the dirt of the Earth, unable to move!"); //print out player's health after they're damaged.
   }
@@ -62,13 +62,13 @@ public class Miner{
     // here we will print out the object's arraylist, which represents the inventory of the player,
     // as well as the variables wealth and weightInPounds, which represent the player's current statistics ( how much money they have and how much their inventory weighs)
     System.out.println("Machine: Now, here is everything in our container. " + playerInventory); // print out the user's arraylist ( a side feature of the game to showcase their progress)
-    App.delayTime(1000);
+    Auxiliary.delayTime(1000);
     System.out.println("Machine: Our current net worth is: " + wealth + " dollars"); // print out the user's money stored in the integer variable wealth ( so we can demonstrate how much money the user has and how far away they are from getting the $15 requisite to win the game
-    App.delayTime(1000);
+    Auxiliary.delayTime(1000);
     System.out.println("Machine: The weight in pounds of our container is " + weightInPounds + " pounds"); // print out the integer variable weightinpounds to demonstrate the weight in pounds of the user's inventory and how far away they are from getting the requisite 200 pounds to win the game
-    App.delayTime(1000);
+    Auxiliary.delayTime(1000);
     System.out.println("Machine: We are at " + health + " health left."); // print out how much health the machine( basically the player) has to show how far away they are from dying ( if it hits 0 they die and lose the game.)
-    App.delayTime(3000);
+    Auxiliary.delayTime(3000);
   }
 
   
@@ -78,12 +78,12 @@ public class Miner{
    if (randNumber == 0){ // if 0 is the number generated, we call the findRandMaterial() method, to find a random material for the user.
      findRandMaterial(this); 
    }
-   else if (randNumber == 1){ // else if randnumber is 1, then we take damage to the user's ship by calling the takeDamage() method.
-     takeDamage();
+   else if (randNumber == 1){ // else if randnumber is 1, then we take damage to the user's ship by calling the setHealth() method.
+     setHealth();
    }
    else{ // this else statement is called when 0 and 1 have not been generated ; essentially, this is the case when 2 has been generated. however, i have chosen to end this series of statemenets in an else statement rather than an else if statement due to personal preferences, but it is 100% fine to end it with an else if statement.
      System.out.println("Machine: False alarm. Nothing here to dig... Oh well....");
-     App.delayTime(3000);
+     Auxiliary.delayTime(3000);
    }
   }
   
