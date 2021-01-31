@@ -91,7 +91,7 @@ public class App {
               }
           }
             Auxiliary.delayTime(3000);
-            if(MinerObj.checkPlayerHealth() == true){
+            if(MinerObj.checkShipHealth() == true){
               System.out.println("Machine: Uh... oh..");
               Auxiliary.delayTime(2000);
               System.out.println("Machine: Poweri..ng.. d..ow...n...");
@@ -122,7 +122,7 @@ public class App {
                 Auxiliary.delayTime(1000);
                 System.out.println("Machine: Okay.");
                 Auxiliary.delayTime(500); // no method on the object is called.
-                Auxiliary.System.out.println("(The machine begins to move and dig rapidly in order to find potential resources across the dirt tunnels.)");
+                System.out.println("(The machine begins to move and dig rapidly in order to find potential resources across the dirt tunnels.)");
                 Auxiliary.delayTime(3000);
                 break;
               }
