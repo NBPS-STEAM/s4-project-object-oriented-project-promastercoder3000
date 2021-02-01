@@ -9,6 +9,21 @@ public class Minerals{
    bronze = $1, silver = $2, gold = $4, and diamond = $8. essentially the value is doubled by each material.
    bronze = 12 pounds, silver = 24 pounds, gold = 48 pounds, diamond = 96 pounds */
 
+
+ //method for finding bronze/silver/gold/diamond below
+  // in this method, we'll have to :
+  // generate a random number and find a random index
+  // add the random material to the arraylist
+  // increase the wealth of the player depending on material found
+  // add to weight of pounds depending on material found
+  // NOTICE: Each material has a different worth as well as different weight in pounds associated with the material. This is why there are different
+  // increases in the integer variables "wealth" and 'weightInPounds' depending on what each material is. 
+  // This is why we have incorporated if statements that check what material has been randomly generated and compares it to a certain string, as shown below.
+  // An if statement turns out to be true when the element indicated by the randomly generated index of the array is equal to the string it is being compared to.
+  // The program will go through each if statement until the material-specific if statement that returns true is found and executed.
+  // For purposes of abstraction, all these if statements are contained within the below method. Many lines of code have been simplified into a single method
+  // that we will call in the main class, App.
+  //MINERAL CLASS
   public static void findRandMineral(Miner minerObj){
     Random rand = new Random(); // here we instantiate a random object that will be used in our code.
     int randItem = rand.nextInt(minerals.length); // here, we create an integer variable called randItem that generates a random number from 0

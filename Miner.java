@@ -26,7 +26,7 @@ public class Miner{
     shipHealth = 100 + shipArmor;
     shipArmor = playerShipArmor;
     numMiners ++;
-    System.out.println("(For each iteration of the game, you will gain additional health to your ship, which essentially forms a protective armor for the ship. This will allow you to survive longer, which is very beneficial. At the moment, you have additional health of: " +  playerShipArmor);
+    System.out.println("(For each iteration of the game, you will gain additional health to your ship, which essentially forms a protective armor for the ship. This will allow you to survive longer, which is very beneficial. At the moment, you will gain additional health (armor) of: " +  playerShipArmor);
   }
 
 
@@ -42,21 +42,6 @@ public class Miner{
     System.out.println("Machine: The mole has clawed at me and drained 10% of my battery. I'm now at " + shipHealth + " health left!\n Please be careful, or we'll both be stuck and buried within the dirt of the Earth, unable to move!"); //print out player's health after they're damaged.
   }
 
-
-  //method for finding bronze/silver/gold/diamond below
-  // in this method, we'll have to :
-  // generate a random number and find a random index
-  // add the random material to the arraylist
-  // increase the wealth of the player depending on material found
-  // add to weight of pounds depending on material found
-  // NOTICE: Each material has a different worth as well as different weight in pounds associated with the material. This is why there are different
-  // increases in the integer variables "wealth" and 'weightInPounds' depending on what each material is. 
-  // This is why we have incorporated if statements that check what material has been randomly generated and compares it to a certain string, as shown below.
-  // An if statement turns out to be true when the element indicated by the randomly generated index of the array is equal to the string it is being compared to.
-  // The program will go through each if statement until the material-specific if statement that returns true is found and executed.
-  // For purposes of abstraction, all these if statements are contained within the below method. Many lines of code have been simplified into a single method
-  // that we will call in the main class, App.
-  //MINERAL CLASS
   public void setWealth(int amount)
   {
       wealth = wealth + amount;
