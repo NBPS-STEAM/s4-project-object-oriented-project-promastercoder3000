@@ -9,6 +9,7 @@ public class Miner{
   private int shipHealth; //player's health when fighting the moles ( underground animals)
   private int weightInPounds; //weight of materials
   private static int numMiners;
+  private int shipArmor;
   public ArrayList<String> playerInventory = new ArrayList<String>(); // we've created an array list that represents our player's inventory.
   
   public Miner(){    
@@ -19,11 +20,13 @@ public class Miner{
     numMiners ++;
   }
   
-  public Miner(int playerShipHealth){
-    shipHealth = playerShipHealth;
+  public Miner(int playerShipArmor){
     wealth = 0;
     weightInPounds = 0;
+    shipHealth = 100 + shipArmor;
+    shipArmor = playerShipArmor;
     numMiners ++;
+    System.out.println("(For each iteration of the game, you will gain additional health to your ship, which essentially forms a protective armor for the ship. This will allow you to survive longer, which is very beneficial. At the moment, you have additional health of: " +  playerShipArmor);
   }
 
 
