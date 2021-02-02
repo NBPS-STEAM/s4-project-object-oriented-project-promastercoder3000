@@ -10,7 +10,7 @@ public class App {
         // start of first nested while loop
         Miner MinerObj;
         if(Miner.getNumMiners() > 0){
-          MinerObj = new Miner(numMiners * 10);
+          MinerObj = new Miner(Miners.numMiners * 10);
         }
         else
         {
