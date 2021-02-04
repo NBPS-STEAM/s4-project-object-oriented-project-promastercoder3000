@@ -8,17 +8,18 @@ public class App {
       boolean loopVar = true;
       while(loopVar){ // Everything is in THIS while loop
         // start of first nested while loop
-        Miner MinerObj;
+        Miner MinerObj; // Declare the object, which is the player.
         if(Miner.getNumMiners() > 0){
+           // example of constructor overloading: if the static variable numMiners is greater than 0, then using the accessor method getNumMiners(), multiply it by 10, and call the constructor with the parameter of "playerShipArmor" and substitute this value for the parameter. For example, if the static variable is equal to 2, then the player will have an additional 20 armor, so they will have a total of 120 health. ( the static variable increases by 1 on each iteration of the loop. )
           MinerObj = new Miner(Miner.getNumMiners() * 10);
         }
         else
         {
-        MinerObj = new Miner(); 
-        } // create our "Miner" object, which is the player.
+        MinerObj = new Miner(); // if the static variable is 0, then just call the constructor with no parameters and create the default object. 
+        } // Either way, we initialize our "Miner" object, which is the player.
         while(true){ // this while loop will pretty much start the game, ask the player to say yes or no, adds to sophistication     
           System.out.println("(Welcome to the game! You'll be embarking on a mining mission.)"); // This while loop consists of many "System.out.println" statements that add to the sophistication of the game by introducing simple and basic dialogue.
-          Auxiliary.delayTime(3000); // calling the Auxiliary.delayTime function, substituting 1000 into the parenthesis.
+          Auxiliary.delayTime(3000); // calling the Auxiliary.delayTime function, substituting 3000 into the parenthesis. Each 1000 milliseconds within the parenthesis represents 1 second.
           System.out.println("(To win, you need to not only acquire a net worth of fifteen dollars, but you also need 200 pounds ( in weight ) worth of items to win.)");
           Auxiliary.delayTime(3000);
           System.out.println("(Sounds hard? Well, that's life. Let's get started!)");
@@ -81,7 +82,7 @@ public class App {
               if (answer.equalsIgnoreCase("yes")){ // user might forget to capitalize, or might capitalize wrong letters, which is okay, as long as they spell "yes" correctly.
                 Auxiliary.delayTime(3000);
                 System.out.println("Machine: Affirmative. Approaching...");
-                MinerObj.setHealthOrFindMaterial();
+                MinerObj.setHealthOrFindMaterial(); // call the modifier method on the object and either modify the object's health or find a random material.
                 break;
               }
               else if (answer.equalsIgnoreCase("no")){ // user might type no ( for whatever reason). (capitalization doesnt matter)
@@ -98,7 +99,7 @@ public class App {
               }
           }
             Auxiliary.delayTime(3000);
-            if(MinerObj.checkShipHealth() == true){
+            if(MinerObj.checkShipHealth() == true){ // calling the boolean method that returns true if the health of the object ( essentially the miner's ship has gone to 0). this will end the nested loop of the program.
               System.out.println("Machine: Uh... oh..");
               Auxiliary.delayTime(2000);
               System.out.println("Machine: Poweri..ng.. d..ow...n...");
@@ -123,7 +124,7 @@ public class App {
               if (answer.equalsIgnoreCase("yes")){ // If the user inputs yes, then the below happens. ( user might forget to captialize "yes", but as long as they spell it correctly, the program will accept the input.)
                 Auxiliary.delayTime(1000);
                 MinerObj.getStats();
-                break; // call the getStats() method on the object, which will print out the player's wealth, inventory, weight in pounds of their inventory, and the health of their ship.
+                break; // call the getStats() accessor method on the object, which will print out the player's wealth, inventory, weight in pounds of their inventory, and the health of their ship. break out of this nested while loop with "break"
               }
               else if(answer.equalsIgnoreCase("no")){ // if the user inputs no, then the below happens. ( user might forget to capitalize "no", but as long as they spell it correctly, the program will accept the input. )
                 Auxiliary.delayTime(1000);

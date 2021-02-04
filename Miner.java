@@ -8,33 +8,33 @@ public class Miner{
   private double wealth; // variable to represnt player's wealth
   private int shipHealth; //player's health when fighting the moles ( underground animals)
   private int weightInPounds; //weight of materials
-  private static int numMiners;
-  private int shipArmor;
+  private static int numMiners; // a private static varriable, which is essentially just a variable belonging to the class called numMiners. 
+  private int shipArmor; // ship armor that will be added to the miner's ship's health.
   public ArrayList<String> playerInventory = new ArrayList<String>(); // we've created an array list that represents our player's inventory.
   
   public Miner(){    
-    //here, we create the constructor for the class, setting our appropiate variables with their default values.
-    shipHealth = 100;
-    wealth = 0;
-    weightInPounds = 0;
-    numMiners ++;
+    //here, we create the constructor for the class, setting our appropiate variables with their default values. this constructor is called each time we instantiate an object
+    shipHealth = 100; // set shiphealth automatically to 100
+    wealth = 0; // set wealth automatically to 0
+    weightInPounds = 0; // set weightInPounds automatically to 0 
+    numMiners ++; // increase the static variable of numMiners by 1 each time ( you will see why we do this in the next several lines)
   }
   
   public Miner(int playerShipArmor){
-    wealth = 0;
-    weightInPounds = 0;
-    shipHealth = 100 + shipArmor;
-    shipArmor = playerShipArmor;
-    numMiners ++;
-    System.out.println("(For each iteration of the game, you will gain additional health to your ship, which essentially forms a protective armor for the ship. This will allow you to survive longer, which is very beneficial. At the moment, you will gain additional health (armor) of: " +  playerShipArmor);
+    wealth = 0; // set wealth automatically to 0
+    weightInPounds = 0; // set weightinpounds to 0
+    shipHealth = 100 + shipArmor; // set shiphealth to 100 PLUS whatever the shiparmor is.
+    shipArmor = playerShipArmor; // shiparmor is equal to what is put in the parameter.
+    numMiners ++; // increase the static variable numMiners by 1
+    System.out.println("(For each iteration of the game, you will gain additional health to your ship, which essentially forms a protective armor for the ship. This will allow you to survive longer, which is very beneficial. At the moment, you will gain additional health (armor) of: " +  playerShipArmor); // the static variable "numMiners" intertwines with this where each iteration of the loop increases numMiners, suggesting an increase in protective armor.
   }
 
 
-  public static int getNumMiners(){
-    return Miner.numMiners;
+  public static int getNumMiners(){ // an accessor method that will allow the program to get the static variable numMiners, which is marked as private.
+    return Miner.numMiners; 
   }
   
-  public void setHealth(){ 
+  public void setHealth(){ // a modifier method that will allow the program to set the private variable shipHealth equal to shipHealth - 10.
       // this method is for taking damage to the player's machine, which is a side struggle of the game that the player must worry about.
     System.out.println("Machine: Mole spotted! Ahh!");
     Auxiliary.delayTime(3000);
@@ -42,17 +42,17 @@ public class Miner{
     System.out.println("Machine: The mole has clawed at me and drained 10% of my battery. I'm now at " + shipHealth + " health left!\n Please be careful, or we'll both be stuck and buried within the dirt of the Earth, unable to move!"); //print out player's health after they're damaged.
   }
 
-  public void setWealth(int amount)
+  public void setWealth(int amount) // a modifier that will allow the program to modify the private variable wealth and set it equal to wealth + the indicated parameter.
   {
       wealth = wealth + amount;
   }
   
-  public void setWeightInPounds(int amount)
+  public void setWeightInPounds(int amount) // a modifier that will allow the program to modify the private variable weightInPounds and set it equal to weightInPounds plus whatever is in the parameters.
   {
     weightInPounds = weightInPounds + amount;
   }
 
-  public void getStats()
+  public void getStats() // a accessor method that will allow the program to access and return the private variables and array of the class ( shiphealth, wealth, weightInPounds, and playerInventory.)
   {
     // here we will print out the object's arraylist, which represents the inventory of the player,
     // as well as the variables wealth and weightInPounds, which represent the player's current statistics ( how much money they have and how much their inventory weighs)
@@ -66,7 +66,7 @@ public class Miner{
     Auxiliary.delayTime(3000);
   }
 
-  
+  // a modifier method that will modify the private variables of the class
   public void setHealthOrFindMaterial() { // here we'll either take damage to the player or find a material for the player's inventory and increase the wealth all based on a randomly generated number.
    Random rand = new Random(); // instantiate an object called "rand" from the random class 
    int randNumber = rand.nextInt(3); // create an integer variable called randNumber that generates a random number from, by default, 0, up to, but not including, the specified number within the parenthesis, which in this case, is 2. There are three possible numbers that can be randomly generated: 0, 1, and 2.

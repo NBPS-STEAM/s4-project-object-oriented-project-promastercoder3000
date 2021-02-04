@@ -31,23 +31,23 @@ public class Minerals{
     minerObj.playerInventory.add(minerals[randItem]);
     if(minerals[randItem].equals("Bronze")){ // an if statement that checks if the element indicated by the randomly generated index of the array is equal to the string "Bronze" 
       System.out.println("Machine: Bronze block located. $1 increase in net worth as well as a 12 pound increase in weight. Great."); // A message that is outputted each time this if statement is true (if the element is equal to "Bronze")
-      minerObj.setWealth(1); // increase the value of the integer variable wealth by 1 if the if statement is true
-      minerObj.setWeightInPounds(12); // increase the value of the integer variable weightInPounds by 12 if the if statement is true
+      minerObj.setWealth(1); // increase the value of the integer variable wealth by 1 if the if statement is true (call the modifier method on the object)
+      minerObj.setWeightInPounds(12); // increase the value of the integer variable weightInPounds by 12 if the if statement is true (call the modifier method on the object)
     }
     else if (minerals[randItem].equals("Silver")){  // an if statement that checks if the element indicated by the randomly generated index of the array is equal to the string "Silver"
       System.out.println("Machine: Silver block located! $2 increase in networth along with 24 pounds of silver added to your inventory."); // A message outputted if the if statement is true
-      minerObj.setWealth(2); // increase the value of the integer variable wealth by 2 if the if statement is true
-      minerObj.setWeightInPounds(24); // increase the value of the integer variable weightInPounds by 24 if the if statement is true
+      minerObj.setWealth(2); // increase the value of the integer variable wealth by 2 if the if statement is true (call the modifier method on the object)
+      minerObj.setWeightInPounds(24); // increase the value of the integer variable weightInPounds by 24 if the if statement is true (call the modifier method on the object)
     }
     else if(minerals[randItem].equals("Gold")){ // an if statement that checks if the element indicated by the randomly generated index of the array is equal to the string "Gold"
       System.out.println("Machine: Gold block located! How rare! $4 increase in net worth and 48 pounds "); // A message outputted if the if statement is true
-      minerObj.setWealth(4); // increase the value of the integer variable wealth by 4 if the if statement is true
-      minerObj.setWeightInPounds(48); // increase the value of the integer variable weightInPounds by 48 if the if statement is true
+      minerObj.setWealth(4); // increase the value of the integer variable wealth by 4 if the if statement is true (call the modifier method on the object)
+      minerObj.setWeightInPounds(48); // increase the value of the integer variable weightInPounds by 48 if the if statement is true (call the modifier method on the object)
     }
     else if(minerals[randItem].equals("Diamond")){ // an if statement that checks if the element indicated by the randomly generated index of the array is equal to the string "Gold"
       System.out.println("Machine: You've spotted a whole diamond! Geez, I'm a machine and even I can feel the joy of finding this. You have increased eight dollars in net worth, and that'll be an added 96 pounds to your container. Lucky us."); // A message outputted if the if statement is true 
-      minerObj.setWealth(8); // increase the value of the integer variable wealth by 8 if the if statement is true
-      minerObj.setWeightInPounds(96); // increase the value of the integer variable weightInPounds by 96 if the if statement is true.
+      minerObj.setWealth(8); // increase the value of the integer variable wealth by 8 if the if statement is true (call the modifier method on the object)
+      minerObj.setWeightInPounds(96); // increase the value of the integer variable weightInPounds by 96 if the if statement is true. (call the modifier method on the object)
     }
   }
    
